@@ -127,9 +127,12 @@ monaco.languages.registerHoverProvider('plaintext', {
 monaco.editor.defineTheme('myCustomTheme', {
   base: 'vs-dark',
   inherit: true,
-  colors: {},
+  colors: {
+    // hover color 
+    'editor.hoverHighlightBackground': '#2ec4b640',
+  },
   rules: [
-    { token: 'SingleTag', foreground: 'fec89a' },
+    { token: 'SingleTag', foreground: 'fec89a', },
     ...BracketColor.map((color, i) => ({
       token: `Bracket_${i + 1}`,
       foreground: color,
